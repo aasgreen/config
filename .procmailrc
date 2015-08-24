@@ -1,0 +1,20 @@
+# Environment variable assignments
+ PATH=/bin:/usr/bin:/usr/local/bin 
+ VERBOSE=off                   # Turn on for verbose log
+ MAILDIR=$HOME/Mail            # Where Procmail recipes deliver
+ DEFAULT=$MAILDIR/inbox/
+ LOGFILE=$HOME/.procmaillog    # Keep a log for troubleshooting.
+ # Recipes
+ 
+:0
+* ^TO_.*@colorado\.edu
+
+colorado/
+
+:0
+* ^TO_.*@gmail\.com
+
+personal/
+
+:0:
+inbox/
