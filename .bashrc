@@ -114,7 +114,14 @@ if ! shopt -oq posix; then
 fi
 
 # added by Anaconda 2.1.0 installer
-export PATH="/home/spencer/anaconda/bin:$PATH"
+export PATH="$HOME/anaconda2/bin:$HOME/zotero:$PATH"
 MAIL=/var/spool/mail/john && export MAIL
 
-source /opt/openfoam30/etc/bashrc
+
+#Add tmux color support
+alias tmux='tmux -2'
+
+export VISUAL=vim
+export EDITOR="$VISUAL"
+
+. /opt/openfoam4/etc/bashrc

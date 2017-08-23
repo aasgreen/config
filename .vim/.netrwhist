@@ -1,3 +1,11 @@
 let g:netrw_dirhistmax  =10
-let g:netrw_dirhist_cnt =1
-let g:netrw_dirhist_1='/home/spencer/Dropbox/CompsII/work/Report'
+let g:netrw_dirhist_cnt =9
+let g:netrw_dirhist_1='/media/adam/agreenhd/Adam/Store/PAL30'
+let g:netrw_dirhist_2='/media/adam/agreenhd/Adam/Store/PAL30/PAL30'
+let g:netrw_dirhist_3='/media/adam/agreenhd/Adam/Store/PAL30'
+let g:netrw_dirhist_4='/media/adam/agreenhd/Adam/Store/PAL30/Numerics'
+let g:netrw_dirhist_5='/media/adam/agreenhd/Adam/Store/PAL30/Numerics/dev'
+let g:netrw_dirhist_6='/media/adam/agreenhd/Adam/Store/PAL30/Numerics/dev/genprop-py'
+let g:netrw_dirhist_7='/opt/openfoam4/bin'
+let g:netrw_dirhist_8='/opt/openfoam4/etc'
+let g:netrw_dirhist_9='/media/adam/agreenhd/Adam/Dropbox/Dropbox/Films/PAL30/PAL30/pal30rep/rep/bib'

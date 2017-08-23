@@ -15,6 +15,8 @@ filetype indent on
 
 set autoread
 
+"Set scrolloff high so that the cursor stays in the middle of the screen
+set so=999
 set colorcolumn=80
 "Always show current position
 set ruler
@@ -30,6 +32,7 @@ set incsearch
 
 set showmatch
 
+"No sounds
 set noerrorbells
 set novisualbell
 set t_vb=
@@ -41,7 +44,13 @@ set tm=500
 syntax enable
 
 colorscheme desert
-set background=dark
+"set background=dark
+
+"Change colour scheme to zenburn
+"
+set t_Co=256
+colorscheme zenburn
+
 
 "All about buffers
 "
@@ -107,3 +116,5 @@ function! ToggleFocusMode()
   endif
 endfunc
 noremap <F1> :call ToggleFocusMode()<cr>
+
+set pastetoggle=<F2>
