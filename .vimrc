@@ -117,4 +117,13 @@ function! ToggleFocusMode()
 endfunc
 noremap <F1> :call ToggleFocusMode()<cr>
 
+function! ToggleEncrypt()
+    set cm=blowfish2
+    set viminfo=
+    set nobackup
+    set nowritebackup
+endfunc
+noremap <F12> :call ToggleEncrypt()<cr>
+"""Autoboot into encrypt mode when opening .e files
+autocmd BufReadPre,FileReadPre *.e :call ToggleEncrypt()
 set pastetoggle=<F2>
