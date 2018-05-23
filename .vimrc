@@ -10,6 +10,7 @@ let mapleader=','
 
 filetype plugin on
 filetype indent on
+set nocompatible
 
 "set to auto read when a file is changed from the outside
 
@@ -42,6 +43,9 @@ set tm=500
 
 "Enable syntac highlighting
 syntax enable
+syntax on
+
+set omnifunc=syntaxcomplete#Complete
 
 colorscheme desert
 "set background=dark
@@ -69,10 +73,17 @@ nmap <leader>bq :bp<BAR> bd #<CR>
  "
 nmap <leader>bl :ls<CR>
 
+"Leave cursor where it lays
+set nostartofline
+
 "Turn backup off
-set nobackup
-set nowb
-set noswapfile
+"set nobackup
+"set nowb
+"set noswapfile
+
+"swap files are useful, but put them in their own directory so they don't clutter up the directory`
+set backupdir=~/.vim/backup//
+set directory=~/.vim/swp//
 
 "Use spaces instead of tabs
 set expandtab
@@ -97,6 +108,12 @@ map k gk
 
 :imap jj <Esc>
 
+
+
+"use markdown for vimwiki
+" vimwiki/vimwiki
+let g:vimwiki_list = [{'path': '~/vimwiki/', 'syntax': 'markdown', 'ext': '.md'}]
+"
 """ FocusMode
 function! ToggleFocusMode()
   if (&foldcolumn != 12)
@@ -127,3 +144,4 @@ noremap <F12> :call ToggleEncrypt()<cr>
 """Autoboot into encrypt mode when opening .e files
 autocmd BufReadPre,FileReadPre *.e :call ToggleEncrypt()
 set pastetoggle=<F2>
+
